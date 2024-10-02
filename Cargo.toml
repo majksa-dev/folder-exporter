@@ -22,3 +22,6 @@ slack-morphism = { version = "2.3", features = ["hyper"] }
 anyhow = "1.0.89"
 tokio = { version = "1.40.0", features = ["full"] }
 url = "2.5.2"
+zip = "2.2.0"
+walkdir = "2.5.0"
+rand = "0.8.5"
