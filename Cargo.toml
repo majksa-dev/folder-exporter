@@ -12,7 +12,7 @@ debug = ["essentials/dotenv"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-essentials = { tag = "0.3.6", git = "https://github.com/majksa-dev/rust-essentials", features = [
+essentials = { tag = "0.3.7", git = "https://github.com/majksa-dev/rust-essentials", features = [
     "log",
 ] }
 serde = { version = "1.0.210", features = ["derive"] }
