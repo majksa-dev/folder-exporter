@@ -10,7 +10,7 @@ name = "server"
 
 [dependencies]
 essentials = { tag = "0.3.6", git = "https://github.com/majksa-dev/rust-essentials" }
-derive_more = "0.99.18"
+derive_more = "1.0.0"
 serde = { version = "1.0.203", features = ["derive"] }
 serde_json = "1.0.120"
 envy = "0.4.2"
