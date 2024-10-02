@@ -1,8 +1,11 @@
+use anyhow::Result;
 use essentials::info;
-use template_rust_app::env::Env;
+use folder_exporter::env::Env;
 
-fn main() {
+#[tokio::main]
+async fn main() -> Result<()> {
     essentials::install();
-    let env = Env::new().unwrap();
-    info!("Server running on port: {}", env.port);
+    let env = Env::new()?;
+    info!("Application running");
+    folder_exporter::start(env).await
 }
