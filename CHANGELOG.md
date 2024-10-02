@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/majksa-dev/folder-exporter/compare/v0.1.0...v0.1.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* build only for amd64 ([a811779](https://github.com/majksa-dev/folder-exporter/commit/a811779d9964e1b88c34f67917a28a9ffdc3dbcd))
+
 ## [0.1.0](https://github.com/majksa-dev/folder-exporter/compare/v0.0.1...v0.1.0) (2024-10-02)
 
 
