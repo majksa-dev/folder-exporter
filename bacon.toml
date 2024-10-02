@@ -81,7 +81,16 @@ on_success = "back"                                                    # so that
 # to false to have the cargo run output immediately displayed instead
 # of waiting for program's end.
 [jobs.run]
-command = ["cargo", "run", "--color", "always", "--features", "debug"]
+command = [
+    "cargo",
+    "run",
+    "--color",
+    "always",
+    "--features",
+    "debug",
+    "--bin",
+    "server",
+]
 need_stdout = true
 allow_warnings = true
 background = true

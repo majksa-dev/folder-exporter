@@ -6,6 +6,7 @@ use serde::Deserialize;
 pub struct Env {
     pub slack_app_token: String,
     pub slack_bot_token: String,
+    pub google_dir_id: String,
     pub dirs_mapping: DirsMapping,
 }
 

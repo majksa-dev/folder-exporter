@@ -74,7 +74,7 @@ async fn process_message(client: Arc<SlackHyperClient>, event: SlackCommandEvent
         }
     };
 
-    let url = match exporter::export(path).await {
+    let url = match exporter::export(path, env.google_dir_id).await {
         Ok(url) => url,
         Err(err) => {
             error!(?err, "Error exporting");
@@ -97,26 +97,11 @@ async fn process_message(client: Arc<SlackHyperClient>, event: SlackCommandEvent
                 SlackBlock::Section(
                     SlackSectionBlock::new().with_text(SlackBlockText::MarkDown(
                         format!(
-                            "Hey <@{}>,\n{project} has just been successfully exported!",
+                            "Hey <@{}>,\n{project} has just been successfully exported!\n\nYou can download it <{url}|here>.",
                             event.user_id.0
                         )
                         .into(),
                     )),
-                ),
-                SlackBlock::Section(
-                    SlackSectionBlock::new()
-                        .with_text(SlackBlockText::MarkDown(
-                            format!("Can be downloaded <{url}|here>, or by click this button ->")
-                                .into(),
-                        ))
-                        .with_accessory(SlackSectionBlockElement::Button(
-                            SlackBlockButtonElement::new(
-                                SlackActionId("button-action".to_owned()),
-                                "Download".into(),
-                            )
-                            .with_style("primary".to_owned())
-                            .with_url(url),
-                        )),
                 ),
             ]),
         ))
