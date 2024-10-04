@@ -18,7 +18,7 @@ essentials = { tag = "0.3.7", git = "https://github.com/majksa-dev/rust-essentia
 serde = { version = "1.0.210", features = ["derive"] }
 serde_json = "1.0.128"
 envy = "0.4.2"
-slack-morphism = { version = "2.3", features = ["hyper"] }
+slack-morphism = { version = "2.5", features = ["hyper"] }
 anyhow = "1.0.89"
 tokio = { version = "1.40.0", features = ["full"] }
 url = "2.5.2"
